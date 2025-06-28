@@ -1,0 +1,151 @@
+*{
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+body {
+    margin: 0;
+    padding: 20px;
+    min-height: 100vh;
+    overflow-x: hidden;
+    /* height: 100vh;  */
+    position: relative;
+    background-color: hsl(0, 0%, 100%);
+}
+#main{
+    text-align: center;
+    margin: 0 auto 80px auto;
+    line-height:0.9;
+    padding: 20px 0;
+    max-width: 600px;
+}
+.main{
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    line-height: 1.2;
+    
+}
+#h{
+    font-weight: 100;
+}
+.home, .bulb, .glass, .tech{
+    padding: 32px;
+    position: absolute;
+    width: 350px;
+    height: 250px;
+    border-radius: 8px;
+    box-shadow: 0 15px 30px -5px;
+}
+
+ .home {
+    border-top: 4px solid hsl(0, 78%, 62%);
+    top: 430px;  
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.bulb {
+    border-top: 4px solid hsl(39, 100%, 56%);
+    top: calc(40% + 10%);
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.glass {
+    border-top: 4px solid hsl(180, 62%, 55%);
+    left: calc(50% - 550px);  
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.tech {
+    border-top: 4px solid hsl(212, 86%, 64%);
+    right: calc(50% - 550px);  
+    top: 50%;
+    transform: translateY(-50%);
+}
+img{
+    float: right;
+}
+
+h1{
+    font-size: xx-large;
+    font-family: sans-serif;
+}
+.home h1, .bulb h1, .glass h1, .tech h1 {
+    font-size: 1.3rem;  
+    font-family: inherit;
+    margin-bottom: 15px;  
+    color: hsl(234, 12%, 34%);
+}
+
+.home p, .bulb p, .glass p, .tech p {
+    font-size: 0.9rem;  
+    color: hsl(229, 6%, 66%);
+    line-height: 1.6;
+    margin-bottom: 40px;  
+}
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+    
+    #main {
+        margin-bottom: 40px;
+    }
+    
+    .home, .bulb, .glass, .tech {
+        position: static;
+        width: 100%;
+        max-width: 350px;
+        margin: 20px auto;
+        transform: none;
+        display: block;
+    }
+    
+    .main {
+        font-size: clamp(1.5rem, 6vw, 2rem);
+    }
+}
+
+@media (min-width: 1200px) {
+    .glass {
+        left: calc(50% - 600px);
+    }
+    
+    .tech {
+        right: calc(50% - 600px);
+    }
+    
+    .home, .bulb, .glass, .tech {
+        width: 380px;  
+        height: 270px;
+    }
+}
+
+@media (max-width: 1199px) and (min-width: 1025px) {
+    .glass {
+        left: calc(50% - 500px); 
+    }
+    
+    .tech {
+        right: calc(50% - 500px);
+    }
+}
+
+@media (max-width: 1024px) and (min-width: 769px) {
+    .glass {
+        left: calc(50% - 400px); 
+    }
+    
+    .tech {
+        right: calc(50% - 400px);
+    }
+    
+    .home, .bulb, .glass, .tech {
+        width: 320px;
+        height: 230px;
+    }
+    
+    .home {
+        top: 280px;
+    }
+}
